@@ -46,7 +46,7 @@ class AnnouncementsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Re
         
         return self.destroy(request, id)
     
-class BannersAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class BannersAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -75,7 +75,7 @@ class BannersAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Retrieve
         
         return self.destroy(request, id)
         
-class EvBannersAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class EvBannersAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -104,7 +104,7 @@ class EvBannersAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Retrie
         
         return self.destroy(request, id)
 
-class EventsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class EventsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -133,7 +133,7 @@ class EventsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveM
         
         return self.destroy(request, id)
 
-class MajorsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class MajorsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -162,7 +162,7 @@ class MajorsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveM
         
         return self.destroy(request, id)
 
-class OrganizationCatAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
+class OrganizationCatAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -191,7 +191,7 @@ class OrganizationCatAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.
         
         return self.destroy(request, id)
         
-class OrganizationAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class OrganizationAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -220,7 +220,7 @@ class OrganizationAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Ret
         
         return self.destroy(request, id)
     
-class RegulationAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class RegulationAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -249,7 +249,7 @@ class RegulationAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Retri
         
         return self.destroy(request, id)
     
-class ScholarshipAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class ScholarshipAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -278,7 +278,7 @@ class ScholarshipAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Retr
         
         return self.destroy(request, id)
     
-class SemestersAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class SemestersAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -307,7 +307,7 @@ class SemestersAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Retrie
         
         return self.destroy(request, id)
     
-class ShortlinksAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class ShortlinksAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -336,7 +336,7 @@ class ShortlinksAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Retri
         
         return self.destroy(request, id)
     
-class StudentsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class StudentsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticated]
     
@@ -365,7 +365,7 @@ class StudentsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Retriev
             
         return self.destroy(request, id)
         
-class StudyProgramAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class StudyProgramAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -394,7 +394,7 @@ class StudyProgramAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Ret
         
         return self.destroy(request, id)
     
-class SubjectsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class SubjectsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
@@ -423,7 +423,7 @@ class SubjectsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.Retriev
         
         return self.destroy(request, id)
     
-class WhistleblowsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class WhistleblowsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
