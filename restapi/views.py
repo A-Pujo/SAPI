@@ -162,7 +162,7 @@ class MajorsAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveM
         
         return self.destroy(request, id)
 
-class OrganizationCatAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
+class OrganizationCatAPI(generics.GenericAPIView, mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin):
     
     permission_classes = [IsAuthenticatedOrReadOnly]
     
