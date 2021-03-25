@@ -59,11 +59,6 @@ class ShortlinksSerializer(serializers.ModelSerializer):
 class StudentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Students
-        fields = ['name', 'npm', 'gender', 'year_generation']
-        
-class StudentsSerializer_dt(serializers.ModelSerializer):
-    class Meta:
-        model = Students
         fields = '__all__'
         
 class StudyPSerializer(serializers.ModelSerializer):
