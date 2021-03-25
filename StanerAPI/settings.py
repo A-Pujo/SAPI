@@ -80,9 +80,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'simpleapp',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'USER': 'adm00n',
+        'PASSWORD': 'AdnVCZDMx6AiO9ifhiWl',
+        'HOST': 'db4free.net',
         'PORT': '3306',
     }
 }
